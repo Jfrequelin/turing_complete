@@ -1,0 +1,28 @@
+Liste des OPCODE : CODE / OPCODE / TAILLE -- arguments | description
+
+LOGIQUE 
+
+0 ADD 4 - OP1 OP2 DEST | OP1 + OP2 -> DEST
+1 SUB 4 - OP1 OP2 DEST | OP1 + OP2 -> DEST
+2 AND 4 - OP1 OP2 DEST | OP1 AND OP2 -> DEST
+3  OR 4 - OP1 OP2 DEST | OP1  OR OP2 -> DEST
+4 NOR 4 - OP1 OP2 DEST | OP1 NOR OP2 -> DEST
+5 XOR 4 - OP1 OP2 DEST | OP1 XOR OP2 -> DEST
+6 MOV 3 - SRC DST      | SRC -> DST 
+7 SHL 4 - OP1 OP2 DEST | OP1 Shifted left OP2 time -> DEST
+8 SHR 4 - OP1 OP2 DEST | OP1 Shifted left OP2 time -> DEST
+
+BRANCHEMENTS
+
+32 JE   4 - OP1 OP2 DEST | Jump to DEST IF OP1 = OP2
+33 JNE  4 - OP1 OP2 DEST | Jump to DEST IF OP1 != OP2
+34 JL   4 - OP1 OP2 DEST | Jump to DEST IF OP1 < OP2
+35 JLE  4 - OP1 OP2 DEST | Jump to DEST IF OP1 =< OP2
+36 JG   4 - OP1 OP2 DEST | Jump to DEST IF OP1 > OP2
+37 JGE  4 - OP1 OP2 DEST | Jump to DEST IF OP1 >= OP2
+38 JUMP 2 - DEST         | Jump to DEST
+39 CALL 2 - DEST         | PUSH program index and Jump to Dest
+                         | MAX 256 saved index
+40 RET  1 -              | RETURN to Pushed program index 
+
+
